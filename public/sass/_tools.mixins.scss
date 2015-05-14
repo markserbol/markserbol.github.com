@@ -1,0 +1,68 @@
+/**
+ * Media query mixin
+ */
+
+@mixin breakpoint($point) {
+  @if $point == xs {
+    @media only screen and (min-width: 0) {
+      @content ; 
+    }
+  } @else if $point == sm {
+    @media only screen and (min-width: 768px) {
+      @content ; 
+    }
+  } @else if $point == md {
+    @media only screen and (min-width: 970px) {
+      @content ; 
+    }
+  } @else if $point == lg {
+    @media only screen and (min-width: 1170px) {
+      @content ; 
+    }
+  }
+}
+
+
+
+/**
+ * Vendor-prefixed CSS
+ */
+
+@mixin vendor($property, $value){
+  -webkit-#{$property}:$value;
+  -moz-#{$property}:$value;
+  -ms-#{$property}:$value;
+  -o-#{$property}:$value;
+  #{$property}:$value;
+}
+
+
+
+/**
+ * Add CSS state in one go
+ */
+
+@mixin states($self: false) {
+
+  @if($self != false) {
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        @content;
+    }
+
+  }
+
+  @else {
+
+    &:hover,
+    &:active,
+    &:focus {
+        @content;
+    }
+
+  }
+
+}

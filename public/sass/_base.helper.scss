@@ -1,0 +1,40 @@
+/**
+ * floats
+ */
+.float--right   { float: right!important; }
+.float--left    { float: left!important; }
+.float--none    { float: none!important; }
+
+/**
+ * Text alignment
+ */
+.text--left     { text-align: left!important; }
+.text--center   { text-align: center!important; }
+.text--right    { text-align: right!important; }
+
+
+.wrapper {
+  max-width: 700px;
+  
+  &.wrapper--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  &.wrapper--medium {
+    max-width: 1170px;
+  }
+}
+
+
+/**
+ * Micro clearfix
+ */
+
+.clearfix {
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

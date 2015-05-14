@@ -1,0 +1,107 @@
+
+.page-head {
+  position: relative;
+  padding: $base-spacing-unit;
+  text-align: center;
+  font-family: $brand-font-family;
+  font-style: normal;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+    height: 2px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: $border-color;
+    border-radius: 1px;
+  }
+  
+  .page-head__photo {
+    opacity: 0.9;
+    padding: $base-spacing-unit 0;
+    
+    .profile-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+  }
+  
+  .page-head__title {
+    margin: 0;
+  }
+  
+  .page-head__description {
+    margin: $base-spacing-unit/2 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba($base-text-color, 0.7);
+  }
+  
+}
+
+
+.intro {
+  padding: $base-spacing-unit;
+}
+
+
+.contact {
+  text-align: center;
+  padding: $base-spacing-unit 0;
+  
+  a {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border-radius: 50%;
+    color: $base-text-color;
+    font-size: 24px;
+    line-height: 60px;
+    text-align: center;
+    border: 2px dashed transparent;
+    margin: $base-spacing-unit;
+    transition: all 0.4s ease;
+    
+    &:hover {
+      color: rgba($base-text-color, 0.7);
+      border-color: $border-color;
+    }
+  }
+  
+}
+
+.section__label {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: $brand-font-family;
+  font-style: normal;
+}
+
+.project-container {
+  margin-top: 80px;
+  
+  .project__item {
+    display: block;
+    padding: $base-spacing-unit;
+    
+    @include breakpoint(sm) {
+      width: 33.3333%;
+      float: left;
+      padding: $base-spacing-unit/2;
+    }
+    
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: $base-font-family;
+  background-image: url('../images/peak.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: $base-text-color;
+  font-style: italic;
+}
+
+p {
+  line-height: 26px;
+}

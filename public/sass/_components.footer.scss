@@ -1,0 +1,10 @@
+.footer {
+  margin: $base-spacing-unit * 4 0 0;
+  padding: $base-spacing-unit;
+  
+  .copyright {
+    font-family: $brand-font-family;
+    font-style: normal;
+    color: rgba($base-text-color, 0.7);
+  }
+}
